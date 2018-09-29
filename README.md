@@ -30,18 +30,18 @@ In case of mishandling of password by the user, he can change the password by vi
 - pip
 
 ## Screenshots
-![alt text]("https://github.com/ayushdata/fit-solution/blob/master/screenshots/Homepage.png")
+![alt text](https://github.com/ayushdata/fit-solution/blob/master/screenshots/Homepage.png)
 ** Homepage: Access to Login and Register pages **
 
-![alt text]("https://github.com/ayushdata/fit-solution/blob/master/screenshots/Quoted.png")
+![alt text](https://github.com/ayushdata/fit-solution/blob/master/screenshots/Quoted.png)
 ** Quoted price along with strong buy/sell indicator **
 
-![alt text]("https://github.com/ayushdata/fit-solution/blob/master/screenshots/Sell.png")
+![alt text](https://github.com/ayushdata/fit-solution/blob/master/screenshots/Sell.png)
 ** Sell the shares held **
 
-![alt text]("https://github.com/ayushdata/fit-solution/blob/master/screenshots/priceAndGains.png")
+![alt text](https://github.com/ayushdata/fit-solution/blob/master/screenshots/priceAndGains.png)
 ** Stocks held and Profit/Loss on $20000 initial money **
 
-![alt text]("https://github.com/ayushdata/fit-solution/blob/master/screenshots/Cryptos.png")
+![alt text](https://github.com/ayushdata/fit-solution/blob/master/screenshots/Cryptos.png)
 ** Chart to show cryptocurrency value variation ** 
 
