@@ -1,0 +1,12 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Apology
+{% endblock %}
+
+{% block main %}
+    <img alt="{{ top }}" style="display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;" src="http://memegen.link/custom/{{ top | urlencode }}/{{ bottom | urlencode }}.jpg?alt=https://imgflip.com/s/meme/Futurama-Fry.jpg"/>
+{% endblock %}

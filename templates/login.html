@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Login Page
+{% endblock %}
+
+{% block main %}
+    <form class="form-signin" method="post">
+      <div class="text-center mb-4">
+        <img class="mb-4" src="static/fitsol.ico" alt="Icon" width="72" height="72">
+        <h1 class="h3 mb-3 font-weight-normal">Login to your FitSolution account!</h1>
+      </div>
+
+      <div class="form-label-group">
+        <input type="email" name="email" id="inputEmail" class="form-control" autocomplete="off" placeholder="Email address" required autofocus>
+        <label for="inputEmail">Email address</label>
+      </div>
+
+      <div class="form-label-group">
+        <input type="password" name="password" id="inputPassword" class="form-control" autocomplete="off" placeholder="Password" required>
+        <label for="inputPassword">Password</label>
+      </div>
+      <button class="btn btn-lg btn-primary btn-block" type="submit">Log in</button>
+      <br />
+      <p class="text-center">Don't have an account yet? Click <a href="{{ url_for('register') }}">register</a> to sign up!</p>
+      <p class="mt-5 mb-3 text-muted text-center">2018-present</p>
+    </form>
+{% endblock %}

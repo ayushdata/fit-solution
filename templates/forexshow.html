@@ -1,0 +1,10 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Trade Stock
+{% endblock %}
+
+{% block main %}
+    <h1 class="h3 mb-3 font-weight-normal" style="text-align: center">{{ outcome }}</h1>
+    <p class=" mt-5 mb-3 text-center"><a href="{{ url_for('forex') }}" style="color: #000799; font-size: 120%">&larr;Try another!</a></p>
+{% endblock %}

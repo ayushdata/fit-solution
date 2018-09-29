@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Register
+{% endblock %}
+
+{% block main %}
+    <form class="form-signin" action="/register" method="post">
+      <div class="text-center mb-4">
+        <img class="mb-4" src="static/fitsol.ico" alt="Icon" width="72" height="72">
+        <h1 class="h3 mb-3 font-weight-normal">Register for a FitSolution account!</h1>
+      </div>
+
+      <div class="form-label-group">
+        <input type="text" id="inputText" name="name" class="form-control" required autocomplete="off" placeholder="Name" autofocus>
+        <label for="inputText">Name</label>
+      </div>
+
+      <div class="form-label-group">
+        <input type="email" id="inputEmail" name="email" class="form-control" required autocomplete="off" placeholder="Email address">
+        <label for="inputEmail">Email address</label>
+      </div>
+
+      <div class="form-label-group">
+        <input type="password" id="inputPassword" name="password" class="form-control" required placeholder="Password">
+        <label for="inputPassword">Password</label>
+      </div>
+
+      <div class="form-label-group">
+        <input type="password" id="inputConfirmPassword" name="confirmation" required class="form-control" placeholder="Confirm Password">
+        <label for="inputConfirmPassword">Confirm Password</label>
+      </div>
+      <button class="btn btn-lg btn-primary btn-block" type="submit">Register</button>
+      <br>
+      <p class="text-center">Already Registered? Click <a href="{{ url_for('login') }}">login</a> to use our services!</p>
+      <p class="mb-3 text-muted text-center">2018-present</p>
+    </form>
+{% endblock %}

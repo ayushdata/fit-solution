@@ -1,0 +1,39 @@
+{% extends "stocktrade.html" %}
+
+{% block title %}
+    History
+{% endblock %}
+
+{% block main %}
+    <div class="container text-center">
+        <img class="mb-4" src="/static/history.png" alt="Icon" width="100" height="100">
+        <h2>HISTORY</h2>
+        <p>Your transactions are: </p>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Buy/Sell</th>
+                    <th>Stock Symbol</th>
+                    <th>Price at the time of transaction</th>
+                    <th>Total Shares dealt</th>
+                    <th>Date of transaction</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for stock in hist %}
+                    <tr>
+                        {% if stock.shares > 0: %}
+                            <td>Buy</td>
+                        {% else: %}
+                            <td>Sell</td>
+                        {% endif %}
+                        <td>{{ stock.symbol }}</td>
+                        <td>{{ stock.price }}</td>
+                        <td>{{ stock.shares }}</td>
+                        <td>{{ stock.date }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+{% endblock %}

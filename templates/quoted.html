@@ -1,0 +1,23 @@
+{% extends "stocktrade.html" %}
+
+{% block title %}
+    Trade Stock
+{% endblock %}
+
+{% block main %}
+    <h1 class="h3 mb-3 font-weight-normal" style="font-style: italic; text-align: center">A share of {{ company }}({{ symbol }}) costs ${{ price }}</h1>
+    <!-- TradingView Widget BEGIN -->
+    <div class="tradingview-widget-container" style="margin: auto;width: 50%;">
+      <div class="tradingview-widget-container__widget"></div>
+      <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-technical-analysis.js" async>
+        {
+            "width": "500",
+            "height": "450",
+            "locale": "en",
+            "symbol": "NASDAQ:{{ symbol }}",
+            "interval": "1D"
+        }
+      </script>
+    </div>
+<!-- TradingView Widget END -->
+{% endblock %}

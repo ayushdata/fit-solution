@@ -1,0 +1,19 @@
+{% extends "stocktrade.html" %}
+
+{% block title %}
+    Quote
+{% endblock %}
+
+{% block main %}
+    <form action="{{ url_for('quote') }}" class="form-signin" method="post">
+        <div class="text-center mb-4">
+            <img class="mb-4" src="/static/Quote.png" alt="Icon" width="100" height="100">
+            <h1 class="h3 mb-3 font-weight-normal">Enter a stock symbol to quote it's price</h1>
+        </div>
+        <div class="form-label-group">
+            <input type="text" id="inputText" name="symbol" class="form-control" autocomplete="off" placeholder="Symbol" autofocus>
+            <label for="inputText">Name</label>
+        </div>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Quote</button>
+    </form>
+{% endblock %}

@@ -1,0 +1,46 @@
+{% extends "stocktrade.html" %}
+
+{% block title %}
+    Stocks Held
+{% endblock %}
+
+{% block main %}
+    <div class="container text-center">
+        <img class="mb-4" src="/static/stocksHeld.png" alt="Icon" width="155" height="100">
+        <h2 align="center">Stocks in hand</h2>
+        <p align="center">Your holdings are: </p>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Stocks owned</th>
+                    <th>Company</th>
+                    <th>Number of shares</th>
+                    <th>Current price</th>
+                    <th>Total value of holdings</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for stock in portfolio %}
+                    <tr>
+                        <td>{{ stock }}</td>
+                        <td>{{ portfolio[stock][3] }}</td>
+                        <td>{{ portfolio[stock][0] }}</td>
+                        <td>${{ portfolio[stock][1] }}</td>
+                        <td>${{ portfolio[stock][2] }}</td></td>
+                    </tr>
+                {% endfor %}
+                <tr>
+                    <td>CASH</td>
+                    <td colspan=3></td>
+                    <td>${{ cash }}</td>
+                </tr>
+            </tbody>
+            <tfoot style="font-weight: bold" align="center">
+                <td></td>
+                <td colspan=3></td>
+                <td>${{ grandTotal }}</td>
+            </tfoot>
+        </table>
+        <p class="mt-1 mb-3 text-muted text-center">“Data provided for free by <a href="https://iextrading.com/developer" style="color: #000000;">IEX</a>. View <a href="https://iextrading.com/api-exhibit-a/" style="color: #000000;">IEX’s Terms of Use</a>.”</p>
+    </div>
+{% endblock %}

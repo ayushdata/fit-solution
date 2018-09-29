@@ -1,0 +1,27 @@
+{% extends "stocktrade.html" %}
+
+{% block title %}
+    Trade Stock
+{% endblock %}
+
+{% block main %}
+    <form action="{{ url_for('sell') }}" class="form-signin" method="post">
+        <div class="text-center mb-4">
+            <img class="mb-4" src="/static/sell.png" alt="Icon" width="100" height="100">
+            <h1 class="h3 mb-3 font-weight-normal">Sell Shares</h1>
+        </div>
+        <div class="form-group">
+            <select class="form-control" name="symbol">
+                <option selected>Select Symbol</option>
+                {% for stk in stock %}
+                    <option style="font-weight: bold; font-style: italic" value="{{ stk.symbol }}">{{ stk.symbol }}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <div class="form-label-group">
+            <input type="number" id="inputNumber" name="shares" autocomplete="off" class="form-control" placeholder="Shares">
+            <label for="inputNumber">Shares</label>
+        </div>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Sell</button>
+    </form>
+{% endblock %}

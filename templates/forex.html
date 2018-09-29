@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Foreign exchange
+{% endblock %}
+
+{% block main %}
+    <form action="{{ url_for('forex') }}" class="form-signin" method="post">
+        <div class="text-center mb-4">
+            <img class="mb-4" src="/static/fx-sign.png" alt="Icon" width="100" height="100">
+            <h1 class="h3 mb-3 font-weight-normal">Get Foreign Exchange Rates!</h1>
+        </div>
+        <div class="form-group">
+            <select name="currency_from" class="form-control">
+	            <option value="USD" selected="selected">United States Dollar</option>
+                {% for symbol, country in currency_list.items() %}
+	               <option value="{{ symbol }}">{{ country }}</option>
+	            {% endfor %}
+            </select>
+        </div>
+        <h3 align="center">To</h3>
+        <br />
+        <div class="form-group">
+            <select name="currency_to" class="form-control">
+	            <option value="INR" selected="selected">Indian National Rupee</option>
+                {% for symbol, country in currency_list.items() %}
+	               <option value="{{ symbol }}">{{ country }}</option>
+	            {% endfor %}
+            </select>
+        </div>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Get Rates!</button>
+    </form>
+{% endblock %}
+
+
+

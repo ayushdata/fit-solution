@@ -1,0 +1,136 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Trade Stock
+{% endblock %}
+
+{% block content %}
+    <li class="nav-item">
+        <a href="{{ url_for('quote') }}" class="nav-link">Quote</a>
+    </li>
+    <li class="nav-item">
+        <a href="{{ url_for('buy') }}" class="nav-link">Buy</a>
+    </li>
+    <li class="nav-item">
+        <a href="{{ url_for('sell') }}" class="nav-link">Sell</a>
+    </li>
+    <li class="nav-item">
+        <a href="{{ url_for('history') }}" class="nav-link">History</a>
+    </li>
+    <li class="nav-item">
+        <a href="{{ url_for('stocksHeld') }}" class="nav-link">Stocks Held</a>
+    </li>
+{% endblock %}
+
+{% block main %}
+<br /><br />
+<!-- TradingView Widget BEGIN -->
+<div class="tradingview-widget-container" style="margin: auto;width: 50%;">
+  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-market-overview.js" async>
+  {
+  "gridLineColor": "rgba(233, 233, 234, 1)",
+  "scaleFontColor": "rgba(218, 221, 224, 1)",
+  "title": "Stocks",
+  "tabs": [
+    {
+      "symbols": [
+        {
+          "s": "NYSE:JPM",
+          "d": "Jpmorgan Chase & Co"
+        },
+        {
+          "s": "NYSE:WFC",
+          "d": "Wells Fargo Co New"
+        },
+        {
+          "s": "NYSE:BAC",
+          "d": "Bank Amer Corp"
+        },
+        {
+          "s": "NYSE:HSBC",
+          "d": "Hsbc Hldgs Plc"
+        },
+        {
+          "s": "NYSE:C",
+          "d": "Citigroup Inc"
+        },
+        {
+          "s": "NYSE:MA",
+          "d": "Mastercard Incorporated"
+        }
+      ],
+      "title": "Financial"
+    },
+    {
+      "symbols": [
+        {
+          "s": "NASDAQ:AAPL",
+          "d": "Apple"
+        },
+        {
+          "s": "NASDAQ:GOOGL",
+          "d": "Google Inc"
+        },
+        {
+          "s": "NASDAQ:MSFT",
+          "d": "Microsoft Corp"
+        },
+        {
+          "s": "NASDAQ:FB",
+          "d": "Facebook Inc"
+        },
+        {
+          "s": "NYSE:ORCL",
+          "d": "Oracle Corp"
+        },
+        {
+          "s": "NASDAQ:INTC",
+          "d": "Intel Corp"
+        }
+      ],
+      "title": "Technology"
+    },
+    {
+      "symbols": [
+        {
+          "s": "NASDAQ:AMZN",
+          "d": "Amazon Com Inc"
+        },
+        {
+          "s": "NYSE:BABA",
+          "d": "Alibaba Group Hldg Ltd"
+        },
+        {
+          "s": "NYSE:T",
+          "d": "At&t Inc"
+        },
+        {
+          "s": "NYSE:WMT",
+          "d": "Wal-mart Stores Inc"
+        },
+        {
+          "s": "NYSE:CHL",
+          "d": "China Mobile Limited"
+        },
+        {
+          "s": "NYSE:V",
+          "d": "Visa Inc"
+        }
+      ],
+      "title": "Services"
+    }
+  ],
+  "plotLineColorFalling": "rgba(255, 74, 104, 1)",
+  "plotLineColorGrowing": "rgba(60, 188, 152, 1)",
+  "showChart": true,
+  "height": 660,
+  "locale": "en",
+  "symbolActiveColor": "rgba(242, 250, 254, 1)",
+  "belowLineFillColorFalling": "rgba(255, 74, 104, 0.05)",
+  "belowLineFillColorGrowing": "rgba(60, 188, 152, 0.05)",
+  "width": 400
+}
+  </script>
+</div>
+<!-- TradingView Widget END -->
+{% endblock %}
