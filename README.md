@@ -1,4 +1,4 @@
-# fit-solution
+# FitSolution
 A flask based financial web application which is used to virtually trade stocks and provide real-time foreign exchange rates.
 
 ## Parts of Web Application
