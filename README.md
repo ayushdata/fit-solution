@@ -2,7 +2,7 @@
 A flask based financial web application which is used to virtually trade stocks and provide real-time foreign exchange rates.
 
 ## Parts of Web Application
-1.  Stock Trading:
+**1.  Stock Trading:**
 
 As the user gets access to the FitSolution account, a fixed amount of virtual money is assigned to the user (In our case we provide $20,000) using which they can play around with the application; also a chart showing stock data of various companies is rendered, from there user can go on to quote the price of a share using the ticker symbol of any company under NASDAQ.
  
@@ -14,11 +14,11 @@ Graphs and data were made available using the platform known as “Trading View.
  
 When fed up dealing stocks, users can now proceed onto the other sections of FitSolution, they are covered further in the following portion.
  
-2. 	Foreign Exchange
+**2. 	Foreign Exchange**
  
 It is the second feature of FitSolution, in this; a user can query the current foreign exchange rates between any two currencies. A couple of lists are generated using Jinja2, HTML and “Open Exchange API”, containing all the major currencies being used in different countries, from which user selects two currencies, then the server handles the request made by client and gets the job done.
  
-3. 	Crypto-currency rates
+**3. 	Crypto-currency rates**
  
 “Tradingview” helped us yet another time in this section; this section provides the pricing of crypto-currencies with respect to real currencies, such as USD. Being accompanied by a graph depicting the rise and fall of the prices, this chart is a perfect indicator of the crypto-currency worth in real market.
  
@@ -31,17 +31,16 @@ In case of mishandling of password by the user, he can change the password by vi
 
 ## Screenshots
 ![alt text](https://github.com/ayushdata/fit-solution/blob/master/screenshots/Homepage.png)
-** Homepage: Access to Login and Register pages **
+**Homepage: Access to Login and Register pages**
 
 ![alt text](https://github.com/ayushdata/fit-solution/blob/master/screenshots/Quoted.png)
-** Quoted price along with strong buy/sell indicator **
+**Quoted price along with strong buy/sell indicator**
 
 ![alt text](https://github.com/ayushdata/fit-solution/blob/master/screenshots/Sell.png)
-** Sell the shares held **
+**Sell the shares held**
 
 ![alt text](https://github.com/ayushdata/fit-solution/blob/master/screenshots/priceAndGains.png)
-** Stocks held and Profit/Loss on $20000 initial money **
+**Stocks held and Profit/Loss on $20000 initial money**
 
 ![alt text](https://github.com/ayushdata/fit-solution/blob/master/screenshots/Cryptos.png)
-** Chart to show cryptocurrency value variation ** 
-
+**Chart to show cryptocurrency value variation** 
