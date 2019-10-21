@@ -28,7 +28,7 @@ jsonschema==2.6.0
 MarkupSafe==1.0
 more-itertools==4.2.0
 newsapi-python==0.2.3
-nltk==3.2.4
+nltk==3.4.5
 oauthlib==2.0.2
 olefile==0.44
 passlib==1.7.1
